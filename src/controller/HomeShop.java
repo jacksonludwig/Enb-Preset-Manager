@@ -3,6 +3,7 @@ package controller;
 import java.io.File;
 
 import javafx.scene.layout.BorderPane;
+import model.Alerts;
 import model.FileMover;
 import view.HomePane;
 
@@ -33,6 +34,7 @@ public class HomeShop {
 				FileMover.copy(f.getAbsolutePath(),
 						"C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\" + f.getName());
 			}
+			Alerts.showPresetLoaded();
 		});
 
 		homePane.getLoadPresetTwo().setOnAction(e -> {
@@ -47,6 +49,7 @@ public class HomeShop {
 				FileMover.copy(f.getAbsolutePath(),
 						"C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\" + f.getName());
 			}
+			Alerts.showPresetLoaded();
 		});
 
 		homePane.getLoadPresetThree().setOnAction(e -> {
@@ -61,6 +64,7 @@ public class HomeShop {
 				FileMover.copy(f.getAbsolutePath(),
 						"C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\" + f.getName());
 			}
+			Alerts.showPresetLoaded();
 		});
 		
 		homePane.getDeleteAllEnbFiles().setOnAction(e -> {
@@ -68,6 +72,7 @@ public class HomeShop {
 					"C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\enbseries");
 			File directory = new File("C:\\Steam\\steamapps\\common\\Skyrim Special Edition\\");
 			FileMover.deleteBaseFiles(directory);
+			Alerts.showEnbDeleted();
 		});
 	}
 
